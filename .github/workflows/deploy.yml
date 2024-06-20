@@ -54,7 +54,4 @@ jobs:
             --build-arg AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
             -t ${{ secrets.AWS_ECR_REPO_URI }}:$IMAGE_TAG .
             
-          docker push ${{ secrets.AWS_ECR_REPO_URI }}:$IMAGE_TAG
-
-      - name: Clean up
-        run: docker logout $ECR_REGISTRY  
+          docker push ${{ secrets.AWS_ECR_REPO_URI }}:$IMAGE_TAG  
