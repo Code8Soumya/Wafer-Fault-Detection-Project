@@ -14,9 +14,6 @@ try:
     logging.info("Successfully got aws cradentials from env file")
 except Exception as e:
     logging.info("Failed to get aws cradentials from env file")
-else:
-    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 
 def s3_client():
     try:
