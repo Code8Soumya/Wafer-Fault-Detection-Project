@@ -6,13 +6,17 @@ from src.logger import logging
 from dotenv import load_dotenv
 load_dotenv()
 
+
 try:
     logging.info("Getting aws cradentials from env file")
-    os.environ["AWS_ACCESS_KEY_ID"] = os.getenv("aws_access_key_id")
-    os.environ["AWS_SECRET_ACCESS_KEY"] = os.getenv("aws_secret_access_key")
+    os.environ["AWS_ACCESS_KEY_ID"] = os.getenv("AWS_ACCESS_KEY_ID")
+    os.environ["AWS_SECRET_ACCESS_KEY"] = os.getenv("AWS_SECRET_ACCESS_KEY")
     logging.info("Successfully got aws cradentials from env file")
 except Exception as e:
-    raise CustomException(e, sys) from e
+    logging.info("Failed to get aws cradentials from env file")
+else:
+    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 
 def s3_client():
     try:
