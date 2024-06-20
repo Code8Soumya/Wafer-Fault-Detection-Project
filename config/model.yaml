@@ -1,0 +1,19 @@
+model:
+  RandomForestClassifier:
+    search_param_grid:
+      n_estimators: 
+        - 100
+        - 200
+        - 300
+      max_depth: 
+        - 3
+        - 5
+        - 7
+      min_samples_split: 
+        - 2
+        - 5
+        - 7
+      min_samples_leaf: 
+        - 1
+        - 2
+        - 4
