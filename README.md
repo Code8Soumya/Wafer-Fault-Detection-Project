@@ -46,7 +46,6 @@ This project aims to detect faults in wafers using a Random Forest classificatio
 2. **In Terminal Run**
    ```bash
     conda create -p venv python==3.12
-    pip install -r requirements.txt
-    <!-- python setup.py install -->
+    pip install -r requirements.txt  
     python app.py
    ```
